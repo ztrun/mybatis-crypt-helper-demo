@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: info
+    com.huiyadan.crypt.mybatis.UserMapper: debug
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema.sql
+    url: jdbc:h2:mem:test
+    username: sa
+    password: sa
+
+mybatis:
+  type-aliases-package: com.huiyadan.crypt.mybatis.alias
+  type-handlers-package: com.huiyadan.crypt.mybatis.type
+  mapper-locations: mapper/*.xml
